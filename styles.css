@@ -1,0 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const noButton = document.getElementById('noButton');
+    const yesButton = document.getElementById('yesButton');
+
+    noButton.addEventListener('mouseover', function() {
+        const x = Math.floor(Math.random() * window.innerWidth);
+        const y = Math.floor(Math.random() * window.innerHeight);
+        noButton.style.position = 'absolute';
+        noButton.style.left = `${x}px`;
+        noButton.style.top = `${y}px`;
+
+        yesButton.style.transform = 'scale(1.2)';
+    });
+
+    noButton.addEventListener('mouseleave', function() {
+        yesButton.style.transform = 'scale(1)';
+    });
+});
